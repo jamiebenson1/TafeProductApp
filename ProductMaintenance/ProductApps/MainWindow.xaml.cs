@@ -49,6 +49,16 @@ namespace ProductApps
             {
                 MessageBox.Show("Enter data again", "Data Entry Error");
             }
+            try
+            {
+                cProduct = new Product(Convert.ToDecimal(priceTextBox.Text), Convert.ToInt16(quantityTextBox.Text));
+                cProduct.calTotalPayment();
+                totalPaymentTextBlock5.Text = Convert.ToString(cProduct.TotalPayment + 25 + 5);
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Enter data again", "Data Entry Error");
+            }
         }
 
         private void clearButton_Click(object sender, RoutedEventArgs e)
