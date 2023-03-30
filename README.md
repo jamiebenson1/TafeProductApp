@@ -1,2 +1,2 @@
 # TafeProductApp
-Git Test 1
+This application calculates the total price of the product
